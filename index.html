@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Enrique Moya" />
+    <meta name="description" content="Replica Amazon landpage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>Replica Amazon Landing Page</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"
+      integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/jpg" sizes="16x16" href="favicon.jpg" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <picture class="">
+        <source media="(max-width: 575px)" srcset="logo-small.png" />
+        <img src="logo.png" alt="Amazon logo" class="header__logo" />
+      </picture>
+      <section class="header__delivery">
+        <span class="delivery__location-icon"
+          ><i class="fa-solid fa-location-dot"></i
+        ></span>
+        <span class="delivery__deliver-to">Deliver to</span>
+        <span class="delivery__country">Mexico</span>
+      </section>
+      <div class="header__search-bar">
+        <label for="bar-menu"></label>
+        <select name="" id="bar-menu" class="search-bar__menu">
+          <option value="" class="search-bar__menu-option">All</option>
+          <option value="" class="search-bar__menu-option">
+            Arts &amp; Craft
+          </option>
+          <option value="" class="search-bar__menu-option">Automotive</option>
+          <option value="" class="search-bar__menu-option">Baby</option>
+          <option value="" class="search-bar__menu-option">
+            Beauty &amp; Personal Care
+          </option>
+          <option value="" class="search-bar__menu-option">Books</option>
+          <option value="" class="search-bar__menu-option">
+            Boy's Fashion
+          </option>
+          <option value="" class="search-bar__menu-option">Computers</option>
+          <option value="" class="search-bar__menu-option">Deals</option>
+          <option value="" class="search-bar__menu-option">
+            Digital Music
+          </option>
+          <option value="" class="search-bar__menu-option">Electornics</option>
+          <option value="" class="search-bar__menu-option">
+            Girl's Fashion
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Health &amp; Household
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Home &amp; Kitchen
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Industrial &amp; Scientific
+          </option>
+          <option value="" class="search-bar__menu-option">Kindle Store</option>
+          <option value="" class="search-bar__menu-option">Luggage</option>
+          <option value="" class="search-bar__menu-option">
+            Men's Fashion
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Movies &amp; TV
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Music, CDs &amp; Vinyl
+          </option>
+          <option value="" class="search-bar__menu-option">Pet Supplies</option>
+          <option value="" class="search-bar__menu-option">Prime Video</option>
+          <option value="" class="search-bar__menu-option">Software</option>
+          <option value="" class="search-bar__menu-option">
+            Sports &amp; Outdoors
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Tools &amp; Home Improvement
+          </option>
+          <option value="" class="search-bar__menu-option">
+            Toys &amp; Games
+          </option>
+          <option value="" class="search-bar__menu-option">Video Games</option>
+          <option value="" class="search-bar__menu-option">
+            Women's Fashion
+          </option>
+        </select>
+        <label for="search-bar"></label>
+        <input
+          type="search"
+          name=""
+          id="search-bar"
+          placeholder="Search Amazon"
+          class="search-bar"
+        />
+        <button class="search-button">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </button>
+      </div>
+      <section class="header__language">
+        <span class="fi fi-us"></span>
+        <span class="language-selected">EN</span>
+        <i class="fa-solid fa-caret-down"></i>
+      </section>
+      <section class="header__accounts">
+        <span class="accounts__first-line">Hello, sign in</span>
+        <span class="accounts__second-line">Accounts &amp; Lists</span>
+      </section>
+      <section class="header__orders">
+        <span class="orders__first-line">Returns</span>
+        <span class="orders__second-line">&amp; Orders</span>
+      </section>
+      <section class="header__cart">
+        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        <span class="cart__text">Cart</span>
+      </section>
+    </header>
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-menu__item item-all">All</li>
+        <li class="nav-menu__item">Today's Deals</li>
+        <li class="nav-menu__item">Customer Service</li>
+        <li class="nav-menu__item">Registry</li>
+        <li class="nav-menu__item">Gift Cards</li>
+        <li class="nav-menu__item">Sell</li>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="card-wrapper">
+        <div class="card beauty-card">
+          <h2 class="card__title">Beauty picks</h2>
+          <div class="beauty-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card gaming-card">
+          <h2 class="card__title">Gaming</h2>
+          <div class="gaming-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card get-fit-card">
+          <h2 class="card__title">Get fit at home</h2>
+          <div class="get-fit-image"></div>
+          <a href="Woman doing yoga" class="card__link">Explore now</a>
+        </div>
+        <div class="card sign-in-card">
+          <h2 class="card__title sign-in-title">
+            Sign in for the best experience
+          </h2>
+          <button class="sign-in-button">Sign in securely</button>
+        </div>
+        <div class="card blue-pic-card"></div>
+        <div class="card valentines-card">
+          <h2 class="card__title">Shop Valentine's Day</h2>
+          <div class="valentines-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card category-card">
+          <h2 class="card__title">Shop by Category</h2>
+          <div class="category-grid">
+            <div class="category-grid__cell">
+              <img src="img/laptop.png" alt="Laptop" />
+              <h3 class="category-grid__title">Computers &amp; Accesories</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/xbox.webp" alt="Laptop" />
+              <h3 class="category-grid__title">Video Games</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/baby.png" alt="Laptop" />
+              <h3 class="category-grid__title">Baby</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/toys.webp" alt="Laptop" />
+              <h3 class="category-grid__title">Toys &amp; Games</h3>
+            </div>
+          </div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card electronics-card">
+          <h2 class="card__title">Electronics</h2>
+          <div class="electronics-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card personal-care-card">
+          <h2 class="card__title">Health &amp; Personal Care</h2>
+          <div class="personal-care-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card books-card">
+          <h2 class="card__title">Top Sellers in Books for you</h2>
+          <div class="card__image-wrapper">
+            <img
+              src="img/books/a.jpg"
+              alt="Book CSS Basic Fundamental Guide For Beginners by MG Martin"
+            />
+            <img
+              src="img/books/b.jpg"
+              alt="Book CSS For Beginners, Learn to Tweak your website Design by Dr. Andy Williams"
+            />
+            <img src="img/books/c.jpg" alt="Book CSS The missing manual" />
+            <img
+              src="img/books/d.jpg"
+              alt="HTML and CSS Book by Kailash chandra Upadhyay"
+            />
+            <img src="img/books/e.jpg" alt="HTML and CSS by Jon Duckett" />
+            <img
+              src="img/books/f.jpeg"
+              alt="Book Eloquent JavaScript Third Edition by Marijn Haverbeke"
+            />
+            <img
+              src="img/books/g.jpg"
+              alt="Book JavaScript the Good Parts by Douglas Crockford "
+            />
+            <img
+              src="img/books/h.jpg"
+              alt="Book The Suble Art of Not Giving a Fuck by Mark Manson"
+            />
+            <img
+              src="img/books/i.jpg"
+              alt="Book Goodbye Things by Fumio Sasaki"
+            />
+            <img src="img/books/j.jpg" alt="Book 1984 by George Well" />
+            <img src="img/books/k.jpg" alt="Book The Art of War by Sun Tzu" />
+            <img
+              src="img/books/l.jpg"
+              alt="Book Can't Hurt Me by David Goggins"
+            />
+          </div>
+        </div>
+        <div class="card wireless-card">
+          <h2 class="card__title">
+            Popular products in Wireless internationally
+          </h2>
+          <div class="card__image-wrapper">
+            <img
+              src="img/wireless/a.jpg"
+              alt="Walkie talkies Super Mario version"
+            />
+            <img src="img/wireless/b.jpg" alt="Phone holder" />
+            <img src="img/wireless/c.jpg" alt="Screen protector" />
+            <img src="img/wireless/d.jpg" alt="Phone case" />
+            <img src="img/wireless/e.jpg" alt="Wireless charger" />
+            <img src="img/wireless/f.jpg" alt="Two radios" />
+            <img src="img/wireless/g.jpg" alt="Phone chargers" />
+            <img src="img/wireless/h.jpg" alt="Multi charger" />
+          </div>
+        </div>
+        <div class="card new-toys-card">
+          <h2 class="card__title">New arrivals in Toys</h2>
+          <div class="new-toys-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card fitness-card">
+          <h2 class="card__title">For your Fitness Needs</h2>
+          <div class="fitness-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card smartwatch-card">
+          <h2 class="card__title">Shop Smartwatches</h2>
+          <div class="smartwatch-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card laptops-card">
+          <h2 class="card__title">Shop Laptops &amp; Tablets</h2>
+          <div class="laptops-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card international-card">
+          <h2 class="card__title">
+            Popular products in Apparel internationally
+          </h2>
+          <div class="card__image-wrapper">
+            <img src="img/international/a.jpg" alt="elbows" />
+            <img src="img/international/b.jpg" alt="black cap" />
+            <img src="img/international/c.jpg" alt="woman powder" />
+            <img src="img/international/d.jpg" alt="socks" />
+            <img src="img/international/e.jpg" alt="bikini" />
+            <img src="img/international/f.jpg" alt="brown cap" />
+            <img src="img/international/h.jpg" alt="white cap with a clover" />
+          </div>
+        </div>
+        <div class="card popular-card">
+          <h2 class="card__title">Popular products in PC internationally</h2>
+          <div class="card__image-wrapper">
+            <img src="img/popular/a.jpg" alt="black backpack" />
+            <img src="img/popular/b.jpg" alt="yellow modem" />
+            <img src="img/popular/c.jpg" alt="laptop" />
+            <img src="img/popular/d.jpg" alt="cables" />
+            <img src="img/popular/e.jpg" alt="more cables" />
+            <img src="img/popular/f.jpg" alt="tablet" />
+            <img src="img/popular/g.jpg" alt="TV adapter" />
+          </div>
+        </div>
+        <div class="card kindle-card">
+          <h2 class="card__title">Kindle E readers</h2>
+          <div class="kindle-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card lights-card">
+          <h2 class="card__title">Create with strip lights</h2>
+          <div class="lights-image"></div>
+          <a href="" class="card__link">Shop now</a>
+        </div>
+        <div class="card pets-card">
+          <h2 class="card__title">Shop Pet supplies</h2>
+          <div class="pets-image"></div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card gaming-merch-card">
+          <h2 class="card__title">Gaming accessories</h2>
+          <div class="category-grid">
+            <div class="category-grid__cell">
+              <img src="img/headsets.png" alt="Laptop" />
+              <h3 class="category-grid__title">Headesets</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/keyboard.png" alt="Laptop" />
+              <h3 class="category-grid__title">Keyboards</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/mouse.png" alt="Laptop" />
+              <h3 class="category-grid__title">Computer mice</h3>
+            </div>
+            <div class="category-grid__cell">
+              <img src="img/chair.png" alt="Laptop" />
+              <h3 class="category-grid__title">Chairs</h3>
+            </div>
+          </div>
+          <a href="" class="card__link">See more</a>
+        </div>
+        <div class="card top-sellers-card">
+          <h2 class="card__title">International top sellers</h2>
+          <div class="card__image-wrapper">
+            <img src="img/top/a.jpg" alt="outlet with USB connectors" />
+            <img src="img/top/b.jpg" alt="thermal cup" />
+            <img src="img/top/c.jpg" alt="spiderman figures" />
+            <img src="img/top/e.jpg" alt="light bulbs" />
+            <img src="img/top/d.jpg" alt="cuphead game" />
+            <img src="img/top/f.jpg" alt="pans" />
+            <img src="img/top/g.jpg" alt="calculator" />
+            <img src="img/top/h.jpg" alt="power strip" />
+          </div>
+        </div>
+        <div class="card top-season-card">
+          <h2 class="card__title">Popular items this season</h2>
+          <div class="card__image-wrapper">
+            <img src="img/season/a.jpg" alt="heaven's official blessing" />
+            <img src="img/season/b.jpg" alt="woman action figure" />
+            <img src="img/season/c.jpg" alt="onion cutter" />
+            <img src="img/season/d.jpg" alt="wireless earpods" />
+            <img src="img/season/e.jpg" alt="another book" />
+            <img src="img/season/f.jpg" alt="screen projector" />
+            <img src="img/season/g.jpg" alt="lamps" />
+            <img src="img/season/h.jpg" alt="lights" />
+            <img src="img/season/i.jpg" alt="laptop" />
+          </div>
+        </div>
+        <div class="card international-home-card">
+          <h2 class="card__title">International top sellers in Home</h2>
+          <div class="card__image-wrapper">
+            <img src="img/home/a.jpg" alt="towels" />
+            <img src="img/home/b.jpg" alt="cooler" />
+            <img src="img/home/c.jpg" alt="shower towels" />
+            <img src="img/home/d.jpg" alt="heater" />
+            <img src="img/home/e.jpg" alt="Ringbell with microphone" />
+            <img src="img/home/f.jpg" alt="window scrubber" />
+            <img src="img/home/g.jpg" alt="pancake maker" />
+            <img src="img/home/h.jpg" alt="utensils" />
+            <img src="img/home/i.jpg" alt="wine glasses" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <section class="footer__sign-in">
+        <p class="personalized-recommendations">
+          See personalized recommendations
+        </p>
+        <button class="sign-in__button">Sign in</button>
+        <p class="new-customer">New customer? <a href="">Start here.</a></p>
+      </section>
+      <section class="footer__back-to-top">
+        <a href="#top" class="back-top-top">
+          <div class="btt-container">Back to top</div>
+        </a>
+      </section>
+      <nav class="footer__faq-nav">
+        <div class="faq-wrapper">
+          <section class="faq-nav__column">
+            <h2 class="faq-nav__topic">Get to Know Us</h2>
+            <ul class="faq-nav__list">
+              <li class="faq-nav__list-item">
+                <a href="">Careers</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Blog</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">About Amazon</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Investor Relations</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Amazon Devices</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Amazon Science</a>
+              </li>
+            </ul>
+          </section>
+          <section class="faq-nav__column">
+            <h2 class="faq-nav__topic">Make Money with Us</h2>
+            <ul class="faq-nav__list">
+              <li class="faq-nav__list-item">
+                <a href="">Sell products on Amazon</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Sell on Amazon Business</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Sell apps on Amazon</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Become an affiliate</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Advertise your Products</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Self-publish with Us</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Host an Amazon Hub</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">See more Make Money with Us</a>
+              </li>
+            </ul>
+          </section>
+          <section class="faq-nav__column">
+            <h2 class="faq-nav__topic">Amazon Payment Products</h2>
+            <ul class="faq-nav__list">
+              <li class="faq-nav__list-item">
+                <a href="">Amazon Business Card</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Shop with Points</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Reload your Balance</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Amazon Currency Converter</a>
+              </li>
+            </ul>
+          </section>
+          <section class="faq-nav__column">
+            <h2 class="faq-nav__topic">Let Us Help You</h2>
+            <ul class="faq-nav__list">
+              <li class="faq-nav__list-item">
+                <a href="">Amazon &amp; COVID-19</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Your Account</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Your Orders</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Shipping Rates &amp; Policies</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Returns &amp; Replacements</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Manage your Content and Devices</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Amazon Assistant</a>
+              </li>
+              <li class="faq-nav__list-item">
+                <a href="">Help</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </nav>
+      <nav class="footer__index">
+        <div class="index-wrapper">
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Music</a>
+            <span class="index__item-description">
+              Stream millions of songs
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Advertising</a>
+            <span class="index__item-description">
+              Find, attract, and engage customers
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Drive</a>
+            <span class="index__item-description">
+              Cloud storage from Amazon
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">6pm</a>
+            <span class="index__item-description">
+              Score deals on fashion brands
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">AbeBooks</a>
+            <span class="index__item-description">
+              Books, art &amp; collectibles
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">ACX</a>
+            <span class="index__item-description">
+              Audiobook Publishing Made Easy
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Sell on Amazon</a>
+            <span class="index__item-description">
+              Start a Selling Account
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Business</a>
+            <span class="index__item-description">
+              Everything For Your Business
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Global</a>
+            <span class="index__item-description">
+              Ship Orders Internationally
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Home Services</a>
+            <span class="index__item-description">
+              Experienced Pros Happiness Guarantee
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Ignite</a>
+            <span class="index__item-description">
+              Sell your original Digital Educational Resources
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Web Services</a>
+            <span class="index__item-description">
+              Scalable Cloud Computing Services
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Audible</a>
+            <span class="index__item-description">
+              Listen to Books &amp; Original Audio Performances
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Book Depository</a>
+            <span class="index__item-description">
+              Books With Free Delivery Worldwide
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Box Office Mojo</a>
+            <span class="index__item-description">
+              Find Movie Box Office Data
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">ComiXology</a>
+            <span class="index__item-description">
+              Thousands of Digital Comics
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">DPReview</a>
+            <span class="index__item-description">Digital Photography</span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Fabric</a>
+            <span class="index__item-description">
+              Sewing, Quilting &amp; Knitting
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Goodreads</a>
+            <span class="index__item-description">
+              Book reviews &amp; recommendations
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">IMDb</a>
+            <span class="index__item-description">
+              Movies, TV &amp; Celebrities
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">IMDbPro</a>
+            <span class="index__item-description">
+              Get Info Entertainment Professionals Need
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Kindle Direct Publishing</a>
+            <span class="index__item-description">
+              Indie Digital & Print Publishing Made Easy
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Prime Video Direct</a>
+            <span class="index__item-description">
+              Video Distribution Made Easy
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Shopbop</a>
+            <span class="index__item-description">Designer Fashion Brands</span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Woot!</a>
+            <span class="index__item-description">Deals and Shenanigans</span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Zappos</a>
+            <span class="index__item-description">Shoes &amp; Clothing</span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Ring</a>
+            <span class="index__item-description">
+              Smart Home Security Systems
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">eero WiFi</a>
+            <span class="index__item-description">
+              Stream 4K Video in Every Room
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Blink</a>
+            <span class="index__item-description">
+              Smart Security for Every Home
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Neighbors App</a>
+            <span class="index__item-description">
+              Real-Time Crime &amp; Safety Alerts
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">Amazon Subscription Boxes</a>
+            <span class="index__item-description">
+              Top subscription boxes - right to your door
+            </span>
+          </div>
+          <div class="index__item">
+            <a href="" class="index__item-link">PillPack</a>
+            <span class="index__item-description">Pharmacy Simplified</span>
+          </div>
+        </div>
+      </nav>
+      <section class="footer__copyright">
+        <a href="" class="copyright__link">Conditions of Use</a>
+        <a href="" class="copyright__link">Privacy Notice</a>
+        <a href="" class="copyright__link">Your Ads Privacy Choices</a>
+        <span class="copyright">
+          © 1996-2023, Amazon.com, Inc. or its affiliates
+        </span>
+      </section>
+    </footer>
+  </body>
+</html>

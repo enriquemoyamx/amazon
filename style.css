@@ -1,0 +1,909 @@
+:root {
+  --bg-blue9: #131921;
+  --bg-blue8: #232f3e;
+  --bg-blue7: #37475a;
+  --bg-gray9: #e3e6e6;
+  --bg-gray8: #f5f6f6;
+  --bg-gray6: #f3f3f3;
+  --bg-white: #fff;
+
+  --text-black: #0f1111;
+  --text-gray9: #999;
+  --text-gray8: #ddd;
+  --text-gray7: #f3f3f3;
+  --text-white: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* 12px */
+  --font-xxs: 0.75rem;
+  /* 13px */
+  --font-xs: 0.8125rem;
+  /* 14px */
+  --font-s: 0.875rem;
+  /* 16px */
+  --font-m: 1rem;
+  /* 21px */
+  --font-l: 1.3125rem;
+}
+
+body {
+  background-color: #ecddd6;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background: var(--bg-blue9);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo {
+  height: 50px;
+  margin-left: 10px;
+  padding: 5px 5px 0 0;
+  border: 1px solid transparent;
+}
+
+.header__logo:hover {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.header__delivery {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  color: var(--text-white);
+  padding: 5px 10px 5px 0px;
+  height: 50px;
+  border: 1px solid transparent;
+}
+
+.header__delivery:hover {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.delivery__location-icon {
+  grid-area: 1 / 1 / 3 / 2;
+  align-self: end;
+  justify-self: center;
+}
+
+.fa-location-dot {
+  color: var(--text-white);
+}
+
+.delivery__deliver-to {
+  font-size: var(--font-xxs);
+  align-self: end;
+}
+
+.delivery__country {
+  font-size: var(--font-s);
+  font-weight: 700;
+  align-self: start;
+}
+
+.header__search-bar {
+  display: flex;
+  gap: 0;
+  flex-grow: 2;
+}
+
+.search-bar__menu {
+  height: 40px;
+  width: 50px;
+  border: 1px solid transparent;
+  background: var(--bg-gray6);
+  cursor: pointer;
+  border-radius: 4px 0 0 4px;
+  font-size: var(--font-s);
+  z-index: 2;
+  color: #838383;
+}
+
+.search-bar__menu:hover {
+  color: #000;
+  background: var(--bg-gray9);
+}
+
+.search-bar__menu:focus {
+  outline: 2px solid #ff9100;
+}
+
+.search-bar {
+  height: 40px;
+  border: 1px solid transparent;
+  background: var(--bg-white);
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.search-bar:focus {
+  outline: 2px solid #ff9100;
+}
+
+.search-button {
+  border: 1px solid transparent;
+  width: 45px;
+  height: 40px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  background-color: #febd69;
+}
+
+.search-button:hover {
+  background: #f7ab47;
+}
+
+.header__language {
+  display: flex;
+  gap: 5px;
+  height: 50px;
+  align-items: center;
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header__language:hover {
+  border: 1px solid var(--text-white);
+  border-radius: 2px;
+}
+
+.language-selected {
+  color: var(--text-white);
+  font-size: var(--font-s);
+  font-weight: 700;
+}
+
+.fa-caret-down {
+  color: var(--text-white);
+}
+
+.header__accounts,
+.header__orders,
+.header__cart {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  height: 50px;
+  padding: 10px;
+  justify-content: center;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.header__cart {
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__accounts:hover,
+.header__orders:hover,
+.header__cart:hover {
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+.accounts__first-line,
+.orders__first-line {
+  font-size: var(--font-xxs);
+}
+
+.accounts__second-line,
+.orders__second-line {
+  font-size: var(--font-s);
+  font-weight: 700;
+}
+
+.accounts__second-line::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.fa-cart-shopping {
+  color: var(--text-white);
+}
+
+.cart__text {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: var(--font-m);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  background: var(--bg-blue8);
+}
+
+.nav-menu__item {
+  margin: 10px;
+  font-size: var(--font-s);
+  color: var(--text-white);
+}
+
+.nav-menu__item:not(.item-all):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.item-all {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item-all::before {
+  content: "\f0c9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.main {
+  background-image: url(img/header.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+}
+
+.card-wrapper {
+  display: grid;
+  width: 100%;
+  max-width: 1480px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 150px 250px 420px 280px 280px 420px 280px 280px 420px 280px 280px 280px;
+  gap: 20px;
+  padding: 300px 20px 20px 20px;
+  margin: auto;
+  grid-template-areas:
+    "beauty gaming get-fit sign-in"
+    "beauty gaming get-fit blue-pic"
+    "valentines category electronics personal-care"
+    "books books books books"
+    "wireless wireless wireless wireless"
+    "new-toys fitness smartwatch laptops"
+    "international international international international"
+    "popular popular popular popular"
+    "kindle lights pets gaming-merch"
+    "top-sellers top-sellers top-sellers top-sellers"
+    "top-season top-season top-season top-season"
+    "international-home international-home international-home international-home";
+}
+
+.beauty-card {
+  grid-area: beauty;
+}
+
+.gaming-card {
+  grid-area: gaming;
+}
+
+.get-fit-card {
+  grid-area: get-fit;
+}
+.sign-in-card {
+  grid-area: sign-in;
+}
+.blue-pic-card {
+  grid-area: blue-pic;
+  padding: 0;
+  background-image: url(img/amazon-shipment.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.valentines-card {
+  grid-area: valentines;
+}
+.category-card {
+  grid-area: category;
+}
+.electronics-card {
+  grid-area: electronics;
+}
+.personal-care-card {
+  grid-area: personal-care;
+}
+.books-card {
+  grid-area: books;
+}
+.wireless-card {
+  grid-area: wireless;
+}
+.new-toys-card {
+  grid-area: new-toys;
+}
+.fitness-card {
+  grid-area: fitness;
+}
+.smartwatch-card {
+  grid-area: smartwatch;
+}
+.laptops-card {
+  grid-area: laptops;
+}
+.international-card {
+  grid-area: international;
+}
+.popular-card {
+  grid-area: popular;
+}
+.kindle-card {
+  grid-area: kindle;
+}
+.lights-card {
+  grid-area: lights;
+}
+.pets-card {
+  grid-area: pets;
+}
+.gaming-merch-card {
+  grid-area: gaming-merch;
+}
+.top-sellers-card {
+  grid-area: top-sellers;
+}
+.top-season-card {
+  grid-area: top-season;
+}
+.international-home-card {
+  grid-area: international-home;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card__title {
+  font-size: var(--font-l);
+  font-weight: 700;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.beauty-image {
+  background-image: url(img/beauty.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.gaming-image {
+  background-image: url(img/gaming.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.get-fit-image {
+  background-image: url(img/fit-at-home.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.valentines-image {
+  background-image: url(img/valentines.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.electronics-image {
+  background-image: url(img/electronics.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.personal-care-image {
+  background-image: url(img/personal-care.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.category-grid {
+  height: 287.5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.category-grid__cell {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  background: rgba(173, 216, 230, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.category-grid__title {
+  font-size: var(--font-xs);
+  text-align: center;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #007185;
+  font-size: var(--font-s);
+}
+
+.card__link:hover {
+  text-decoration: underline;
+  color: #c7511f;
+}
+
+.sign-in-title {
+  width: 100%;
+}
+
+.sign-in-button {
+  width: 100%;
+  background-color: #ffd814;
+  border: 6px solid #ffd814;
+  border-radius: 0.5em;
+  font-size: var(--font-s);
+  cursor: pointer;
+}
+
+.sign-in-button:hover {
+  background-color: #ffd014;
+  border-color: #ffd014;
+}
+
+.card__image-wrapper {
+  background: lightblue;
+  display: flex;
+  height: 187.5px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card__image-wrapper img {
+  cursor: pointer;
+}
+
+.new-toys-image {
+  background-image: url(img/new-toys.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.fitness-image {
+  background-image: url(img/fitness.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.smartwatch-image {
+  background-image: url(img/smartwatch.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.laptops-image {
+  background-image: url(img/laptop2.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.kindle-image {
+  background-image: url(img/kindle.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.lights-image {
+  background-image: url(img/lights.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.pets-image {
+  background-image: url(img/pets.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 1000px;
+}
+
+.footer__sign-in {
+  height: 130px;
+  background: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.personalized-recommendations {
+  font-size: var(--font-xs);
+}
+
+.sign-in__button {
+  width: 230px;
+  border-radius: 4px;
+  border: none;
+  font-size: var(--font-xxs);
+  padding: 0.4em;
+  background: linear-gradient(#ffd876 30%, #ffc738 50%);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-customer {
+  font-size: 11px;
+}
+
+.new-customer a {
+  text-decoration: none;
+  color: #007185;
+}
+
+.new-customer a:hover {
+  text-decoration: underline;
+  color: #c7511f;
+}
+
+.btt-container {
+  background: var(--bg-blue7);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btt-container:hover {
+  background: #3d4b5d;
+}
+
+.footer__back-to-top a {
+  color: white;
+  font-size: var(--font-xs);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer__faq-nav {
+  background: var(--bg-blue8);
+}
+
+.faq-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.faq-nav__topic {
+  color: #fff;
+  margin: 0.5em 0;
+}
+
+.faq-nav__list {
+  list-style: none;
+  max-width: 150px;
+}
+
+.faq-nav__list-item {
+  margin: 0.4em 0;
+  font-size: var(--font-s);
+}
+
+.faq-nav__list-item a {
+  color: var(--text-gray8);
+  text-decoration: none;
+}
+
+.faq-nav__list-item a:hover {
+  text-decoration: underline;
+}
+
+.footer__index {
+  background: var(--bg-blue9);
+  width: 100%;
+}
+
+.index-wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  gap: 30px;
+}
+
+.index-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.index__item-link {
+  font-size: var(--font-s);
+  text-decoration: none;
+  color: var(--text-white);
+}
+
+.index__item-link:hover {
+  text-decoration: underline;
+}
+
+.index__item-description {
+  display: block;
+  font-size: var(--font-xxs);
+  color: var(--text-gray9);
+}
+
+.footer__copyright {
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  background: var(--bg-blue9);
+  border-top: 1px dotted white;
+  padding-top: 0.8em;
+}
+
+.copyright__link {
+  color: var(--text-white);
+  font-size: var(--font-xxs);
+  text-decoration: none;
+  margin: 0 0.8em;
+}
+
+.copyright__link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  display: block;
+  color: var(--text-white);
+  font-size: var(--font-xxs);
+  margin-top: 0.8em;
+}
+
+/* Media Queries */
+
+@media (max-width: 1250px) {
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 420px 250px 150px 420px 280px 280px 420px 280px 280px 420px 280px 280px 280px;
+    grid-template-areas:
+      "beauty gaming get-fit"
+      "valentines category blue-pic"
+      "valentines category sign-in"
+      "electronics personal-care new-toys"
+      "wireless wireless wireless"
+      "books books books"
+      "fitness smartwatch laptops"
+      "international international international"
+      "popular popular popular"
+      "kindle pets gaming-merch"
+      "top-sellers top-sellers top-sellers"
+      "top-season top-season top-season"
+      "international-home international-home international-home";
+  }
+
+  .lights-card {
+    display: none;
+  }
+
+  .category-grid__cell img {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1002px) {
+  .card-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 420px 150px 250px 280px 420px 280px 420px 280px 420px 280px 420px 280px 420px 280px 420px 280px;
+    grid-template-areas:
+      "beauty gaming"
+      "get-fit sign-in"
+      "get-fit blue-pic"
+      "books books"
+      "valentines category"
+      "wireless wireless"
+      "electronics personal-care"
+      "international international"
+      "new-toys fitness"
+      "popular popular"
+      "smartwatch laptops"
+      "top-sellers top-sellers"
+      "kindle lights"
+      "top-season top-season"
+      "pets gaming-merch"
+      "international-home international-home";
+    padding-top: 200px;
+  }
+
+  .lights-card {
+    display: flex;
+  }
+
+  .category-grid__cell img {
+    max-width: 60%;
+  }
+
+  .faq-wrapper {
+    gap: 30px;
+  }
+
+  .index-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header__delivery {
+    display: none;
+  }
+}
+
+@media (max-width: 904px) {
+  .header__orders {
+    display: none;
+  }
+}
+
+@media (max-width: 812px) {
+  .header__accounts {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__language {
+    display: none;
+  }
+  .cart__text {
+    display: none;
+  }
+
+  .card-wrapper {
+    padding-top: 150px;
+  }
+
+  .search-bar__menu {
+    display: none;
+  }
+
+  .search-bar {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .card-wrapper {
+    grid-template-rows: 350px 130px 200px 240px 350px 240px 350px 240px 350px 240px 350px 240px 350px 240px 350px 240px;
+  }
+
+  .sign-in-title {
+    font-size: var(--font-m);
+  }
+
+  .card__title {
+    font-size: var(--font-m);
+  }
+
+  .faq-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .index-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 507px) {
+  .header__cart {
+    display: none;
+  }
+
+  .header__search-bar {
+    margin-right: 10px;
+  }
+
+  .nav-menu__item:not(.item-all) {
+    display: none;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "beauty"
+      "gaming"
+      "get-fit"
+      "sign-in"
+      "blue-pic"
+      "books"
+      "valentines"
+      "category"
+      "wireless"
+      "electronics"
+      "personal-care"
+      "international"
+      "new-toys"
+      "fitness"
+      "popular"
+      "smartwatch"
+      "laptops"
+      "top-sellers"
+      "kindle"
+      "lights"
+      "top-season"
+      "pets"
+      "gaming-merch"
+      "international-home";
+    grid-template-rows: repeat(3, 350px) 120px 300px 250px 350px 400px 250px 350px 350px 250px 350px 350px 250px 350px 350px 250px 350px 350px 250px 350px 400px 250px;
+  }
+
+  .index-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
