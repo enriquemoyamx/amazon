@@ -807,10 +807,6 @@ body {
 }
 
 @media (max-width: 904px) {
-  .main {
-    background-image: url(img/header-1000w.jpg);
-  }
-
   .header__orders {
     display: none;
   }
@@ -865,10 +861,6 @@ body {
 }
 
 @media (max-width: 507px) {
-  .main {
-    background-image: url(img/header-550w.jpg);
-  }
-
   .header__cart {
     display: none;
   }
